@@ -41,6 +41,7 @@ void menuRegrasPt1(){
 	setlocale(LC_ALL, "PORTUGUESE");
 
 	printf("    ____________________________________________________________\n");
+	printf("                                REGRAS                          \n");   
 	printf("                                                            \n");
 	printf("	BEM VINDO AO QUIZ TECH, AQUI VOCÊ ENCONTRARÁ PERGUNTAS  \n");
 	printf("	RELACIONADAS AO MUNDO DA TÉCNOLOGIA E QUE DESAFIARAM    \n");
@@ -67,8 +68,9 @@ void menuRegrasPt1(){
 }
 
 
-void menuRegrasPt2(){
+int menuRegrasPt2(){
 	setlocale(LC_ALL, "PORTUGUESE");
+	int menu;
 	
 	printf("                             PONTOS                            \n");
 	printf("                                                           \n");
@@ -86,14 +88,66 @@ void menuRegrasPt2(){
 	printf("		          DIFÍCIL     20	  						\n");
 	printf("	               --------------------			                   					\n");
 	printf("															\n");
+	printf(" -----------------------------------------------------------\n");            
+	printf("                      FORMA DE PONTUAÇÃO                    \n"); 
+	printf("                                                            \n"); 
+	printf("   A PONTUAÇÃO MÁXIMA É 225, PORÉM DURANTE O JOGO A FORMA   \n"); 
+	printf("   DE PONTUAÇÃO VARIA UM POUCO, SE CASO VOCÊ ERRE UMA QUESTÃO\n"); 
+	printf("   DE NÍVEL FÁCIL NADA DE MAIS IRA ACONTECER, AGORA CASO VOCÊ\n");
+	printf("   ERRE UMA QUESTÃO DO NÍVEL MÉDIA A PRÓXIMA QUESTÃO NÃO     \n");
+	printf("   VALERÁ PONTOS, A NÃO SER QUE SEJE UMA DIFÍCIL, E NO CASO  \n"); 
+ 	printf("   DE ERRAR UMA QUESTÃO DIFÍCIL, VOCÊ IRÁ PERDER 5 PONTOS.   \n");
+	printf("                                                             \n");
+	printf(" ------------------------------------------------------------\n");
+	printf("                           AJUDAS                            \n");
+	printf("                                                             \n");   
+	printf("   DURANTE O JOGO VOCÊ PODERÁ RECORRER A ALGUMAS AJUDAS,     \n");         
+	printf("   ELAS SÃO DICA, CHATGPT OU PULA:                           \n");
+	printf("                                                             \n");
+	printf("   - DICA: VOCÊ TERA UMA DICA SOBRE A QUESTÃO                \n");
+	printf("                                                             \n");
+	printf("   - CHATGPT: VOCÊ TERA ACESSO A UM CHATGPT EXCLUSIVO DO     \n");  
+	printf("     QUIZ PARA SABER A RESPOSTA                              \n");
+	printf("                                                             \n");
+	printf("   - PULA: VOCÊ PODERA PULAR QUALQUER QUESTÃO SEM PERDER     \n");  
+	printf("     PONTOS                                                  \n");
+	printf("                                                             \n"); 
+	printf("   VOCÊ INICIARA COM 1 DICA, 1 PULA. PARA GNAHAR O CHATGPT   \n");
+	printf("   TERÁ QUE SER NA SORTE DURANTE O JOGO, A QUALQUER MOMENTO  \n");  
+	printf("   PODERÁ GANHAR.                                            \n");
+	printf("                                                             \n");  
+	printf("   O PULAR VOCÊ PODE GANHAR SE ACERTA UMA QUESTÃO DÍFICIL,   \n");
+	printf("   LEMBRANDO QUE TALVEZ GANHE, UMA QUESTÃO DE SORTE          \n");
+	printf("                                                             \n");    
+	printf("   A DICA VOCÊ SEMPRE IRÁ GANHAR AO ACERTA UMA DIFÍCIL OU    \n"); 
+	printf("   A POSSIBILIDADE DE GANHAR AO ACERTAR UMA MÉDIA.           \n");
+	printf("                                                             \n");  
+	printf("   BOM JOGO !!!!!!                                           \n");
+	printf("                                                             \n");
+	printf("   DIGITE 1 PARA COMEÇAR O JOGO:                             \n");
+	scanf("%d", &menu);
 	
-	
-	
-	
+	return menu;
 }
 void menuJogar(){
+    setlocale(LC_ALL, "PORTUGUESE");
 	
-	
+	printf("_____________________________________________________\n");
+	printf("|                                                    |\n");  
+	printf("|                                                    |\n"); 
+	printf("|                                                    |\n"); 
+	printf("|                                                    |\n"); 
+	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|                                                    |\n"); 
+	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|	                                             |\n");
+	printf("|____________________________________________________|\n");
 	
 	
 	
@@ -103,7 +157,8 @@ void main(){
    /*switch(menuInicial()){
    	 case 1: printf("Metodo jogar"); break;
    	 case 2: printf("Método créditos"); break;
-    }*/
+    }
 	menuRegrasPt1();
-	menuRegrasPt2();
+	menuRegrasPt2();*/
+	menuJogar();
 }
