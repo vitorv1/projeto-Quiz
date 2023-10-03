@@ -129,87 +129,15 @@ int menuRegrasPt2(){
 	
 	return menu;
 }
-void menuJogar(){
-	system("cls");
-    setlocale(LC_ALL, "PORTUGUESE");
-	
-	int op;
-	
-	printf("_____________________________________________________\n");
-	printf("|                                                    |\n");  
-	printf("|       QUAL SERÁ SEU MODO DE JOGO:                  |\n"); 
-	printf("|                                                    |\n"); 
-	printf("|                                                    |\n");
-	printf("|       1 - PADRÃO                                   |\n"); 
-	printf("|       2 - FÁCIL                                    |\n");
-	printf("|       3 - MÉDIO                                    |\n");
-	printf("|       4 - DIFÍCIL                                  |\n");
-	printf("|       5 - ALEATÓRIO                                |\n"); 
-	printf("|                                                    |\n");
-	printf("|                                                    |\n");
-	printf("|                                                    |\n");
-	printf("|                                                    |\n");
-	printf("|	                                             |\n");
-	printf("|____________________________________________________|\n");
-	printf("OPÇÃO: ");
-	scanf("%d", &op);
-}
-
-
-
-void jogoPadrao(){
-	int pontuacao;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
-
-
-int pergunta1(int pontuacao){
+void menuJogar(){ 
 	//facil
 	char opcao[10];
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d               | \n ", pontuacao);
-	printf("O que é um smartphone e para que ele é usado?                                                         |\n");
-	printf("a) Um tipo de geladeira                                                                                | \n");
-	printf("b) Um dispositivo móvel usado para fazer chamadas telefônicas e enviar mensagens                       | \n");
-	printf("c) Uma ferramenta de jardinagem                                                                        | \n");
-	printf("d) Uma linguagem de programação                                                                        | \n");
-	printf("-------------------------------------------------------------------------------------------------------| \n");
-	printf("OPÇÃO: ");
-	scanf("%s", &opcao);
-	
-	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
-		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabénss :) !!!!");
-	}else{
-		system("cls");
-		printf("Você errou :(");
-	}
-	
-	return pontuacao;
-}
-
-int pergunta2(int pontuacao){
-	//facil
-	char opcao[10];
-	setlocale(LC_ALL, "PORTUGUESE");
-	system("cls");
-	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual é a diferença entre um navegador web e um mecanismo de busca ?                                   | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é a diferença entre um navegador web e um mecanismo de busca ?                                    | \n");
 	printf("a) Ambos são a mesma coisa                                                                             | \n");
 	printf("b) Um navegador web é usado para procurar informações na internet,                                     | \n");
 	printf("   equanto um mecanismo de busaca exibe paginas da web                                                 | \n");
@@ -237,8 +165,9 @@ int pergunta3(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("O que a sigla 'URL' significa ?                                                                       | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que a sigla 'URL' significa ?                                                                        | \n");
 	printf("a) Uniform Resource Locator                                                                            | \n");
 	printf("b) Universal Resource Language                                                                         | \n");
 	printf("c) Underlying                                                                                          | \n");
@@ -265,8 +194,9 @@ int pergunta4(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("O que significa a sigla 'HTML' na programação web ?                                                   | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que significa a sigla 'HTML' na programação web ?                                                    | \n");
 	printf("a) HyperText Markup Language                                                                           | \n");
 	printf("b) High-Tech Modern Language                                                                           | \n");
 	printf("c) Hyperlink Text Management Language                                                                  | \n");
@@ -293,8 +223,9 @@ int pergunta5(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual destes termos está relacionado à armazenagem de dados em servidores remotos pela internet ?      | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual destes termos está relacionado à armazenagem de dados em servidores remotos pela internet ?       | \n");
 	printf("a) Wi-fi                                                                                               | \n");
 	printf("b) Cloud Computing                                                                                     | \n");
 	printf("c) Bluetooth                                                                                           | \n");
@@ -321,8 +252,9 @@ int pergunta6(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual é o navegador de internet desenvolvido pela Google ?                                             | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é o navegador de internet desenvolvido pela Google ?                                              | \n");
 	printf("a) Firefox                                                                                             | \n");
 	printf("b) Safari                                                                                              | \n");
 	printf("c) Edge                                                                                                | \n");
@@ -349,8 +281,9 @@ int pergunta7(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual é o sistema operacional móvel desenvolvido pela Apple ?                                          | \n");
+	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é o sistema operacional móvel desenvolvido pela Apple ?                                           | \n");
 	printf("a) Android                                                                                             | \n");
 	printf("b) iOS                                                                                                 | \n");
 	printf("c) Windows Mobile                                                                                      | \n");
@@ -546,7 +479,6 @@ int pergunta18(int pontuacao){
 	return pontuacao;
 }
 
-
 void pergunta(int jogo){
 	/*switch(jogo){
 		case 1:{
@@ -585,6 +517,6 @@ void main(){
 	menuRegrasPt1();
 	menuRegrasPt2();*/
 	//menuJogar();
-	pergunta8(0);
+	pergunta7(0);
 }
 
