@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <time.h>
+#include <stdbool.h>
 
 int menuInicial(){
 	setlocale(LC_ALL, "PORTUGUESE");
@@ -94,33 +96,9 @@ int menuRegrasPt2(){
 	printf("   A PONTUAÇÃO MÁXIMA É 225, PORÉM DURANTE O JOGO A FORMA   \n"); 
 	printf("   DE PONTUAÇÃO VARIA UM POUCO, SE CASO VOCÊ ERRE UMA QUESTÃO\n"); 
 	printf("   DE NÍVEL FÁCIL NADA DE MAIS IRA ACONTECER, AGORA CASO VOCÊ\n");
-	printf("   ERRE UMA QUESTÃO DO NÍVEL MÉDIA A PRÓXIMA QUESTÃO NÃO     \n");
-	printf("   VALERÁ PONTOS, A NÃO SER QUE SEJE UMA DIFÍCIL, E NO CASO  \n"); 
- 	printf("   DE ERRAR UMA QUESTÃO DIFÍCIL, VOCÊ IRÁ PERDER 5 PONTOS.   \n");
+	printf("   ERRE UMA QUESTÃO DO NÍVEL MÉDIA PERDERÁ 5 PONTOS, E CASO     \n");
+	printf("   VOCÊ ERRE UMA DIFÍCIL, PERDERÁ 10 PONTOS.                 \n"); 
 	printf("                                                             \n");
-	printf(" ------------------------------------------------------------\n");
-	printf("                           AJUDAS                            \n");
-	printf("                                                             \n");   
-	printf("   DURANTE O JOGO VOCÊ PODERÁ RECORRER A ALGUMAS AJUDAS,     \n");         
-	printf("   ELAS SÃO DICA, CHATGPT OU PULA:                           \n");
-	printf("                                                             \n");
-	printf("   - DICA: VOCÊ TERA UMA DICA SOBRE A QUESTÃO                \n");
-	printf("                                                             \n");
-	printf("   - CHATGPT: VOCÊ TERA ACESSO A UM CHATGPT EXCLUSIVO DO     \n");  
-	printf("     QUIZ PARA SABER A RESPOSTA                              \n");
-	printf("                                                             \n");
-	printf("   - PULA: VOCÊ PODERA PULAR QUALQUER QUESTÃO SEM PERDER     \n");  
-	printf("     PONTOS                                                  \n");
-	printf("                                                             \n"); 
-	printf("   VOCÊ INICIARA COM 1 DICA, 1 PULA. PARA GNAHAR O CHATGPT   \n");
-	printf("   TERÁ QUE SER NA SORTE DURANTE O JOGO, A QUALQUER MOMENTO  \n");  
-	printf("   PODERÁ GANHAR.                                            \n");
-	printf("                                                             \n");  
-	printf("   O PULAR VOCÊ PODE GANHAR SE ACERTA UMA QUESTÃO DÍFICIL,   \n");
-	printf("   LEMBRANDO QUE TALVEZ GANHE, UMA QUESTÃO DE SORTE          \n");
-	printf("                                                             \n");    
-	printf("   A DICA VOCÊ SEMPRE IRÁ GANHAR AO ACERTA UMA DIFÍCIL OU    \n"); 
-	printf("   A POSSIBILIDADE DE GANHAR AO ACERTAR UMA MÉDIA.           \n");
 	printf("                                                             \n");  
 	printf("   BOM JOGO !!!!!!                                           \n");
 	printf("                                                             \n");
@@ -129,17 +107,22 @@ int menuRegrasPt2(){
 	
 	return menu;
 }
-void menuJogar(){
+
+int menuJogar(){
 	system("cls");
     setlocale(LC_ALL, "PORTUGUESE");
-	
-	int op;
-	
+    int op;
 	printf("_____________________________________________________\n");
 	printf("|                                                    |\n");  
+	printf("|                                                    |\n"); 
+	printf("|                                                    |\n"); 
 	printf("|       QUAL SERÁ SEU MODO DE JOGO:                  |\n"); 
 	printf("|                                                    |\n"); 
 	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|                                                    |\n");
+	printf("|                                                    |\n"); 
 	printf("|       1 - PADRÃO                                   |\n"); 
 	printf("|       2 - FÁCIL                                    |\n");
 	printf("|       3 - MÉDIO                                    |\n");
@@ -153,35 +136,19 @@ void menuJogar(){
 	printf("|____________________________________________________|\n");
 	printf("OPÇÃO: ");
 	scanf("%d", &op);
+	return op;
 }
-
-
-
-void jogoPadrao(){
-	int pontuacao;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
-
 
 int pergunta1(int pontuacao){
 	//facil
 	char opcao[10];
+	int quantAjuda;
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d               | \n ", pontuacao);
-	printf("O que é um smartphone e para que ele é usado?                                                         |\n");
+	printf("  DIFICULDADE: FÁCIL                                                        PONTUAÇÃO: %d               | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é um smartphone e para que ele é usado?                                                          |\n");
 	printf("a) Um tipo de geladeira                                                                                | \n");
 	printf("b) Um dispositivo móvel usado para fazer chamadas telefônicas e enviar mensagens                       | \n");
 	printf("c) Uma ferramenta de jardinagem                                                                        | \n");
@@ -189,16 +156,23 @@ int pergunta1(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabénss :) !!!!");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
-	
 	return pontuacao;
 }
 
@@ -208,8 +182,9 @@ int pergunta2(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual é a diferença entre um navegador web e um mecanismo de busca ?                                   | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é a diferença entre um navegador web e um mecanismo de busca ?                                    | \n");
 	printf("a) Ambos são a mesma coisa                                                                             | \n");
 	printf("b) Um navegador web é usado para procurar informações na internet,                                     | \n");
 	printf("   equanto um mecanismo de busaca exibe paginas da web                                                 | \n");
@@ -218,18 +193,27 @@ int pergunta2(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
-	
+
 	return pontuacao;
 }
+
 
 int pergunta3(int pontuacao){
 	//facil
@@ -237,8 +221,9 @@ int pergunta3(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("O que a sigla 'URL' significa ?                                                                       | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que a sigla 'URL' significa ?                                                                        | \n");
 	printf("a) Uniform Resource Locator                                                                            | \n");
 	printf("b) Universal Resource Language                                                                         | \n");
 	printf("c) Underlying                                                                                          | \n");
@@ -246,14 +231,22 @@ int pergunta3(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "a") == 0 || strcmp(opcao,"A") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
 	
 	return pontuacao;
@@ -265,8 +258,9 @@ int pergunta4(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("O que significa a sigla 'HTML' na programação web ?                                                   | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que significa a sigla 'HTML' na programação web ?                                                    | \n");
 	printf("a) HyperText Markup Language                                                                           | \n");
 	printf("b) High-Tech Modern Language                                                                           | \n");
 	printf("c) Hyperlink Text Management Language                                                                  | \n");
@@ -274,14 +268,22 @@ int pergunta4(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "a") == 0 || strcmp(opcao,"A") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
 	
 	return pontuacao;
@@ -293,8 +295,9 @@ int pergunta5(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual destes termos está relacionado à armazenagem de dados em servidores remotos pela internet ?      | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual destes termos está relacionado à armazenagem de dados em servidores remotos pela internet ?       | \n");
 	printf("a) Wi-fi                                                                                               | \n");
 	printf("b) Cloud Computing                                                                                     | \n");
 	printf("c) Bluetooth                                                                                           | \n");
@@ -302,14 +305,22 @@ int pergunta5(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
 	
 	return pontuacao;
@@ -321,8 +332,9 @@ int pergunta6(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual é o navegador de internet desenvolvido pela Google ?                                             | \n");
+	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é o navegador de internet desenvolvido pela Google ?                                              | \n");
 	printf("a) Firefox                                                                                             | \n");
 	printf("b) Safari                                                                                              | \n");
 	printf("c) Edge                                                                                                | \n");
@@ -330,14 +342,22 @@ int pergunta6(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
 	
 	return pontuacao;
@@ -349,8 +369,9 @@ int pergunta7(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual é o sistema operacional móvel desenvolvido pela Apple ?                                          | \n");
+	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é o sistema operacional móvel desenvolvido pela Apple ?                                           | \n");
 	printf("a) Android                                                                                             | \n");
 	printf("b) iOS                                                                                                 | \n");
 	printf("c) Windows Mobile                                                                                      | \n");
@@ -358,14 +379,22 @@ int pergunta7(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
 	
 	return pontuacao;
@@ -387,14 +416,22 @@ int pergunta8(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
 	
 	return pontuacao;
@@ -416,14 +453,22 @@ int pergunta9(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
 	
 	return pontuacao;
@@ -445,18 +490,213 @@ int pergunta10(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "d") == 0 || strcmp(opcao,"D") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
 	}
 	
 	return pontuacao;
-}
+}  
+int pergunta11(int pontuacao){
+	//facil
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual destes componentes de hardware é responsável pelo armazenamento de dados em um computador?        | \n");
+	printf("a) CPU                                                                                                 | \n");
+	printf("b) Disco rígido (HD)                                                                                   | \n");
+	printf("c) Memória RAM                                                                                         | \n");
+	printf("d) Teclado                                                                                             | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+	}
+	
+	return pontuacao;
+}  
+
+int pergunta12(int pontuacao){
+	//facil
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual termo descreve um programa de computador projetado para fazer uma tarefa específica,              | \n");
+	printf("como processamento de texto?                                                                           | \n");
+	printf("a) Software                                                                                            | \n");
+	printf("b) Firmware                                                                                            | \n");
+	printf("c) Hardware                                                                                            | \n");
+	printf("d) Shareware                                                                                           | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "a") == 0 || strcmp(opcao,"A") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+	}
+	
+	return pontuacao;
+} 
+
+int pergunta13(int pontuacao){
+	//facil
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual destes dispositivos é usado para exibir informações visuais em um computador?                     | \n");
+	printf("a) CPU                                                                                                 | \n");
+	printf("b) Monitor                                                                                             | \n");
+	printf("c) Roteador                                                                                            | \n");
+	printf("d) Impressora                                                                                          | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+	}
+	
+	return pontuacao;
+} 
+
+int pergunta14(int pontuacao){
+	//facil
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual foi o sistema operacional desenvolvido por Linus Torvalds ?                                       | \n");
+	printf("a) Android                                                                                             | \n");
+	printf("b) Windows                                                                                             | \n");
+	printf("c) iOS                                                                                                 | \n");
+	printf("d) Linux                                                                                               | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "d") == 0 || strcmp(opcao,"D") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+	}
+	
+	return pontuacao;
+} 
+
+int pergunta15(int pontuacao){
+	//facil
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual tipo de dispositivo de entrada permite que você mova o cursor na tela de um computador ?          | \n");
+	printf("a) Teclado                                                                                             | \n");
+	printf("b) Mouse                                                                                             | \n");
+	printf("c) Impressora                                                                                                 | \n");
+	printf("d) Monitor                                                                                               | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "d") == 0 || strcmp(opcao,"D") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+	}
+	
+	return pontuacao;
+} 
+
+
 
 int pergunta16(int pontuacao){
 	//médio
@@ -474,15 +714,23 @@ int pergunta16(int pontuacao){
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
+	int op = 0;
 	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
 		pontuacao = pontuacao + 15;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
-		printf("A próxima questão não valerá pontos !");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
 	}
 	
 	return pontuacao;
@@ -494,24 +742,33 @@ int pergunta17(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual é a diferença entre um navegador web e um mecanismo de busca ?                                   | \n");
-	printf("a) Ambos são a mesma coisa                                                                             | \n");
-	printf("b) Um navegador web é usado para procurar informações na internet,                                     | \n");
-	printf("   equanto um mecanismo de busaca exibe paginas da web                                                 | \n");
-	printf("c) Um navegador web é usado para cozinhar receitas                                                     | \n");
-	printf("d) Nenhuma das alternativas                                                                            | \n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é um SSD(Solid State Drive) em comparação com um HDD (Hard Disk Drive) ?                         | \n");
+	printf("a) Um tipo de mouse                                                                                    | \n");
+	printf("b) Um tipo de monitor                                                                                  | \n");
+	printf("c) Uma unidade de armazenamento mais rápida e sem partes móveis                                        | \n");
+	printf("d) Uma impressora a laser                                                                              | \n");
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
-	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
+	int op = 0;
+	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
 		pontuacao = pontuacao + 15;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
 	}
 	
 	return pontuacao;
@@ -523,68 +780,595 @@ int pergunta18(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	printf("-------------------------------------------------------------------------------------------------------|\n");
-	printf("                                                                           PONTUAÇÃO: %d                | \n ", pontuacao);
-	printf("Qual é a diferença entre um navegador web e um mecanismo de busca ?                                   | \n");
-	printf("a) Ambos são a mesma coisa                                                                             | \n");
-	printf("b) Um navegador web é usado para procurar informações na internet,                                     | \n");
-	printf("   equanto um mecanismo de busaca exibe paginas da web                                                 | \n");
-	printf("c) Um navegador web é usado para cozinhar receitas                                                     | \n");
-	printf("d) Nenhuma das alternativas                                                                            | \n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é um 'software de código aberto' ?                                                               | \n");
+	printf("a) Um software que não requer código-fonte                                                             | \n");
+	printf("b) Um software que não pode ser modificado                                                             | \n");
+	printf("c) Um software que só roda em sistemas Windows                                                         | \n");
+	printf("d) Um software cujo código-fonte é público e pode ser modificado por qualquer pessoa                   | \n");
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
-	
-	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
+	int op = 0;
+	if(strcmp(opcao, "d") == 0 || strcmp(opcao,"D") == 0){
 		pontuacao = pontuacao + 10;
-		system("cls");
-		printf("Você acertou parabéns :)");
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
 	}else{
-		system("cls");
-		printf("Você errou :(");
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
 	}
 	
 	return pontuacao;
 }
 
+int pergunta19(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é o protocolo de rede amplamente usado para enviar e-mails ?                                      | \n");
+	printf("a) TCP/IP                                                                                              | \n");
+	printf("b) SMTP                                                                                                | \n");
+	printf("c) HTTP                                                                                                | \n");
+	printf("d) FTP                                                                                                 | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "d") == 0 || strcmp(opcao,"D") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta20(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é 'realidade virtual' (VR) ?                                                                     | \n");
+	printf("a) Uma linguagem de programação                                                                        | \n");
+	printf("b) Uma tecnologia que cria ambientes virtuais imersivos                                                | \n");
+	printf("c) Um tipo de monitor de alta resolução                                                                | \n");
+	printf("d) Um dispositivo de armazenamento externo                                                             | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta21(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é a linguagem de programação amplamente usada para desenvolver aplicativos para Android ?         | \n");
+	printf("a) Java                                                                                                | \n");
+	printf("b) Swift                                                                                               | \n");
+	printf("c) C++                                                                                                 | \n");
+	printf("d) Python                                                                                              | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "a") == 0 || strcmp(opcao,"A") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta22(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é 'cloud computing' ?                                                                            | \n");
+	printf("a) Um sistema de armazenamento de dados offline                                                        | \n");
+	printf("b) Uma tecnologia de comunicação por satélite                                                          | \n");
+	printf("c) Uma abordagem de computação que utiliza servidores remotos pela Internet para processar             | \n");
+	printf("   e armazenar os dados                                                                                | \n");
+	printf("d) Um tipo de impressora a laser                                                                       | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta23(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é o sistema operacional de código aberto baseado em Unix amplamente usado em servidores web ?     | \n");
+	printf("a) Linux                                                                                               | \n");
+	printf("b) Windows                                                                                             | \n");
+	printf("c) macOS                                                                                               | \n");
+	printf("d) Android                                                                                             | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "a") == 0 || strcmp(opcao,"A") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta24(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é um 'driver de dispositivo' em um computador ?                                                  | \n");
+	printf("a) Um software que ajuda a controlar e gerenciar um dispositivo de hardware específico                 | \n");
+	printf("b) Um tipo de dispositivo de entrada                                                                   | \n");
+	printf("c) Uma função de um sistema operacional                                                                | \n");
+	printf("d) Um tipo de rede sem fio                                                                             | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "a") == 0 || strcmp(opcao,"A") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta25(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é a 'nuvem' em tecnologia da informação ?                                                        | \n");
+	printf("a) Uma forma de armazenamento físico de dados                                                          | \n");
+	printf("b) Um tipo de computador muito poderoso                                                                | \n");
+	printf("c) Um serviço de armazenamento online acessível pela internet                                          | \n");
+	printf("d) Um programa de edição de fotos                                                                      | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta30(int pontuacao){
+	//dificil
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: DIFÍCIL                                                     PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é a 'Lei de Moore' no contexto da tecnologia de computadores ?                                   | \n");
+	printf("a) Uma lei que restringe o uso de dispositivos de armazenamento externo                                | \n");
+	printf("b) Uma lei que estabelece os padrões de qualidade para monitores de computador                         | \n");
+	printf("c) Uma observação que sugere que o número de transistores em um chip de computador tende               | \n");
+	printf("   a dobrar aproximadamente a cada dois anos                                                           | \n");
+	printf("d) Uma lei que regula a velocidade da conexão à Internet                                               | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 10; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta31(int pontuacao){
+	//dificil
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: DIFÍCIL                                                     PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que é a 'Lei de Moore' no contexto da tecnologia de computadores ?                                   | \n");
+	printf("a) Uma lei que restringe o uso de dispositivos de armazenamento externo                                | \n");
+	printf("b) Uma lei que estabelece os padrões de qualidade para monitores de computador                         | \n");
+	printf("c) Uma observação que sugere que o número de transistores em um chip de computador tende               | \n");
+	printf("   a dobrar aproximadamente a cada dois anos                                                           | \n");
+	printf("d) Uma lei que regula a velocidade da conexão à Internet                                               | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 10; 
+	}
+	
+	return pontuacao;
+}
+
+void validaPontuacao(int pontuacao){
+	setlocale(LC_ALL, "PORTUGUESE");
+	if(pontuacao == 225){
+		system("cls");
+		printf("Meus parabéns, você atingiu 225 pontos :) , a quantidade de máxima de pontos \n");
+		printf("isso significa que você zerou o quiz com maestria e mostrou que possui \n");
+		printf("um conhecimento sólido na área da técnologia !!!! \n");
+	}else if(pontuacao == 125){
+		system("cls");
+		printf("Parabéns por chegar até aqui, não alcançõu a pontuação máxima :/ , porém mostrou \n");
+		printf("que possui um bom conhecimento na área, mais sorte da próxima vez !! \n");
+	}else{
+		system("cls");
+		printf("Não foi dessa vez, infelizmente passou longe da pontuação máxima :( , porém \n");
+		printf("continue firme no seus estudos e em sempre evoluir que concerteza conseguirá \n");
+		printf("supera seus desafios, continue !!");
+	}
+}
+
+void menuCreditos(){
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	int op;
+	printf("------------------------------------------------------------------------------------------------------- \n");
+	printf("Esse jogo foi desenvolvido por dois alunos da Unicesumar(Maringá/Paraná) \n");
+	printf("do curso de ADS(Análise e Desenvolvimento de Sistemas), esses são: \n");
+	printf("\n");
+	printf("- Vitor Hugo Vieria de Lima | Linkedin: www.linkedin.com/in/vitor-hugo-vieira-de-lima-a2286a244 \n");
+	printf("- Daniel Francis Rinaldi Araujo | Linkedin: \n");
+	printf("\n");
+	printf("O projeto foi idealizado a partir de um trabalho da faculdade, o link do repositório com os códigos \n");
+	printf("para melhor análise: https://github.com/vitorv1/projeto-quiz \n");
+	printf("Obrigado por jogar :) \n");
+	printf("Digite 1 para voltar para o menu inicial \n");
+	printf("-------------------------------------------------------------------------------------------------------");
+	scanf("OPÇÃO: %d", &op);
+	return op;
+}
 
 void pergunta(int jogo){
-	/*switch(jogo){
+	switch(jogo){
+		int pontuacao = 0;
 		case 1:{
-			int i, pontuacao = 0;
-			pontucao = pergunta1(pontuacao);
-			pontucao = pergunta2(pontuacao);
-			
-			
-			
-			
-			
+			pontuacao = 0;
+			pontuacao = pergunta1(pontuacao);
+			pontuacao = pergunta2(pontuacao);
+			pontuacao = pergunta3(pontuacao);
+			pontuacao = pergunta4(pontuacao);
+			pontuacao = pergunta5(pontuacao);
+			pontuacao = pergunta16(pontuacao);
+			pontuacao = pergunta17(pontuacao);
+			pontuacao = pergunta18(pontuacao);
+			pontuacao = pergunta19(pontuacao);
+			pontuacao = pergunta20(pontuacao);
+			/*pontuacao = pergunta30(pontuacao);
+			pontuacao = pergunta31(pontuacao);
+			pontuacao = pergunta32(pontuacao);
+			pontuacao = pergunta33(pontuacao);
+			pontuacao = pergunta34(pontuacao);*/
+			validaPontuacao(pontuacao);
 			break;
 		}
-		
-		
-		
-	}*/
-	
+		case 2 :{
+			pontuacao = 0;
+			pontuacao = pergunta1(pontuacao);
+			pontuacao = pergunta2(pontuacao);
+			pontuacao = pergunta3(pontuacao);
+			pontuacao = pergunta4(pontuacao);
+			pontuacao = pergunta5(pontuacao);
+			pontuacao = pergunta6(pontuacao);
+			pontuacao = pergunta7(pontuacao);
+			pontuacao = pergunta8(pontuacao);
+			pontuacao = pergunta9(pontuacao);
+			pontuacao = pergunta10(pontuacao);
+			pontuacao = pergunta11(pontuacao);
+			pontuacao = pergunta12(pontuacao);
+			pontuacao = pergunta13(pontuacao);
+			pontuacao = pergunta14(pontuacao);
+			pontuacao = pergunta15(pontuacao);
+			validaPontuacao(pontuacao);
+			break;
+		} 
+		case 3 :{
+			pontuacao = 0;
+			pontuacao = pergunta16(pontuacao);
+			pontuacao = pergunta17(pontuacao);
+			pontuacao = pergunta18(pontuacao);
+			pontuacao = pergunta19(pontuacao);
+			pontuacao = pergunta20(pontuacao);
+			pontuacao = pergunta21(pontuacao);
+			pontuacao = pergunta22(pontuacao);
+			pontuacao = pergunta23(pontuacao);
+			pontuacao = pergunta24(pontuacao);
+			pontuacao = pergunta25(pontuacao);
+		/*	pontuacao = pergunta26(pontuacao);
+			pontuacao = pergunta27(pontuacao);
+			pontuacao = pergunta28(pontuacao);
+			pontuacao = pergunta29(pontuacao);
+			pontuacao = pergunta30(pontuacao);*/
+			validaPontuacao(pontuacao);
+			break;
+		}
+		/*case 4 :{
+			pontuacao = 0;
+			pontuacao = pergunta31(pontuacao);
+			pontuacao = pergunta32(pontuacao);
+			pontuacao = pergunta33(pontuacao);
+			pontuacao = pergunta34(pontuacao);
+			pontuacao = pergunta35(pontuacao);
+			pontuacao = pergunta36(pontuacao);
+			pontuacao = pergunta37(pontuacao);
+			pontuacao = pergunta38(pontuacao);
+			pontuacao = pergunta39(pontuacao);
+			pontuacao = pergunta40(pontuacao);
+			pontuacao = pergunta41(pontuacao);
+			pontuacao = pergunta42(pontuacao);
+			pontuacao = pergunta43(pontuacao);
+			pontuacao = pergunta44(pontuacao);
+			pontuacao = pergunta45(pontuacao);
+			validaPontuacao(pontuacao);
+			break;
+		}*/
+		case 5 :{
+			pontuacao = 0;
+			int i, num;
+			for(i = 0; i < 15; i ++){
+				srand(time(NULL));
+				num = rand() % 51;
+			
+				switch(num){
+					case 1: pontuacao = pergunta1(pontuacao); break;
+					case 2: pontuacao = pergunta2(pontuacao); break;
+					case 3: pontuacao = pergunta3(pontuacao); break;
+					case 4: pontuacao = pergunta4(pontuacao); break;
+					case 5: pontuacao = pergunta5(pontuacao); break;
+					case 6: pontuacao = pergunta6(pontuacao); break;
+					case 7: pontuacao = pergunta7(pontuacao); break;
+					case 8: pontuacao = pergunta8(pontuacao); break;
+					case 9: pontuacao = pergunta9(pontuacao); break;
+					case 10: pontuacao = pergunta10(pontuacao); break;
+					case 11: pontuacao = pergunta11(pontuacao); break;
+					case 12: pontuacao = pergunta12(pontuacao); break;
+					case 13: pontuacao = pergunta13(pontuacao); break;
+					case 14: pontuacao = pergunta14(pontuacao); break;
+					case 15: pontuacao = pergunta15(pontuacao); break;
+					case 16: pontuacao = pergunta16(pontuacao); break;
+					case 17: pontuacao = pergunta17(pontuacao); break;
+					case 18: pontuacao = pergunta18(pontuacao); break;
+					case 19: pontuacao = pergunta19(pontuacao); break;
+					case 20: pontuacao = pergunta20(pontuacao); break;
+					case 21: pontuacao = pergunta21(pontuacao); break;
+					case 22: pontuacao = pergunta22(pontuacao); break;
+					case 23: pontuacao = pergunta23(pontuacao); break;
+					case 24: pontuacao = pergunta24(pontuacao); break;
+					case 25: pontuacao = pergunta25(pontuacao); break;
+					/*case 26: pontuacao = pergunta26(pontuacao); break;
+					case 27: pontuacao = pergunta27(pontuacao); break;
+					case 28: pontuacao = pergunta28(pontuacao); break;
+					case 29: pontuacao = pergunta29(pontuacao); break;
+					case 30: pontuacao = pergunta30(pontuacao); break;
+					case 31: pontuacao = pergunta31(pontuacao); break;
+					case 32: pontuacao = pergunta32(pontuacao); break;
+					case 33: pontuacao = pergunta33(pontuacao); break;
+					case 34: pontuacao = pergunta34(pontuacao); break;
+					case 35: pontuacao = pergunta35(pontuacao); break;
+					case 36: pontuacao = pergunta36(pontuacao); break;
+					case 37: pontuacao = pergunta37(pontuacao); break;
+					case 38: pontuacao = pergunta38(pontuacao); break;
+					case 39: pontuacao = pergunta39(pontuacao); break;	
+			    	case 40: pontuacao = pergunta40(pontuacao); break;
+					case 41: pontuacao = pergunta41(pontuacao); break;
+					case 42: pontuacao = pergunta42(pontuacao); break;
+			  		case 43: pontuacao = pergunta43(pontuacao); break;
+			  		case 44: pontuacao = pergunta44(pontuacao); break;
+			  		case 45: pontuacao = pergunta45(pontuacao); break;*/
+				}
+		    }
+		    validaPontuacao(pontuacao);
+		}	
+	}
+}
+
+void menuPrincipal(int op){
+	switch(op){
+   		case 1:{
+  			menuRegrasPt1();
+	       	menuRegrasPt2();
+    		pergunta(menuJogar());
+	   		break;
+		}	
+		case 2: menuCreditos(); 
+    }
+}
+
+bool validaContinuar(){
+	int op;
+	printf("Para continuar a jogar, basta digitar 1 \n");
+	printf("Para sair do jogo e ir para os créditos digite 2 \n");
+	scanf("%d", &op);
+	if(op == 1)
+		return true;
+	else
+		return false;
 	
 }
 
-
-
-
-
-
-
-
-
-
-
-
 void main(){
-   /*switch(menuInicial()){
-    }
-	menuRegrasPt1();
-	menuRegrasPt2();*/
-	//menuJogar();
-	pergunta8(0);
+	int op;
+	while(op != 1){
+		op = menuInicial();
+		if(op == 2)
+			op = menuCreditos();
+	}
 }
 
