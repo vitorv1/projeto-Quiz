@@ -7,6 +7,7 @@
 int menuInicial(){
 	setlocale(LC_ALL, "PORTUGUESE");
 	int menu = 0;
+	system("cls");
  printf("_______________________________________________________________\n");
  printf("|                                                              |\n");    
  printf("|      **********      ***       ***    ***   *************    |\n");
@@ -149,6 +150,7 @@ int pergunta1(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                        PONTUAÇÃO: %d               | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é um smartphone e para que ele é usado?                                                          |\n");
+	printf("                                                                                                       | \n");
 	printf("a) Um tipo de geladeira                                                                                | \n");
 	printf("b) Um dispositivo móvel usado para fazer chamadas telefônicas e enviar mensagens                       | \n");
 	printf("c) Uma ferramenta de jardinagem                                                                        | \n");
@@ -185,6 +187,7 @@ int pergunta2(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual é a diferença entre um navegador web e um mecanismo de busca ?                                    | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Ambos são a mesma coisa                                                                             | \n");
 	printf("b) Um navegador web é usado para procurar informações na internet,                                     | \n");
 	printf("   equanto um mecanismo de busaca exibe paginas da web                                                 | \n");
@@ -224,6 +227,7 @@ int pergunta3(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que a sigla 'URL' significa ?                                                                        | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Uniform Resource Locator                                                                            | \n");
 	printf("b) Universal Resource Language                                                                         | \n");
 	printf("c) Underlying                                                                                          | \n");
@@ -261,6 +265,7 @@ int pergunta4(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que significa a sigla 'HTML' na programação web ?                                                    | \n");
+	printf("                                                                                                       | \n");
 	printf("a) HyperText Markup Language                                                                           | \n");
 	printf("b) High-Tech Modern Language                                                                           | \n");
 	printf("c) Hyperlink Text Management Language                                                                  | \n");
@@ -298,6 +303,7 @@ int pergunta5(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual destes termos está relacionado à armazenagem de dados em servidores remotos pela internet ?       | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Wi-fi                                                                                               | \n");
 	printf("b) Cloud Computing                                                                                     | \n");
 	printf("c) Bluetooth                                                                                           | \n");
@@ -335,6 +341,7 @@ int pergunta6(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual é o navegador de internet desenvolvido pela Google ?                                              | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Firefox                                                                                             | \n");
 	printf("b) Safari                                                                                              | \n");
 	printf("c) Edge                                                                                                | \n");
@@ -372,6 +379,7 @@ int pergunta7(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual é o sistema operacional móvel desenvolvido pela Apple ?                                           | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Android                                                                                             | \n");
 	printf("b) iOS                                                                                                 | \n");
 	printf("c) Windows Mobile                                                                                      | \n");
@@ -409,6 +417,7 @@ int pergunta8(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual destes dispositivos é usado para imprimir documentos e imagens ?                                  | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Roteador                                                                                            | \n");
 	printf("b) Scanner                                                                                             | \n");
 	printf("c) Impressora                                                                                          | \n");
@@ -446,6 +455,7 @@ int pergunta9(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é um arquivo de extensão '.PDF' comumente usado para ?                                           | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Áudio                                                                                               | \n");
 	printf("b) Vídeo                                                                                               | \n");
 	printf("c) Texto e gráficos                                                                                    | \n");
@@ -483,6 +493,7 @@ int pergunta10(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual destas empresas é conhecida por produzir o sistema operacional Windows ?                          | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Apple                                                                                               | \n");
 	printf("b) Google                                                                                              | \n");
 	printf("c) Amazon                                                                                              | \n");
@@ -519,6 +530,7 @@ int pergunta11(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual destes componentes de hardware é responsável pelo armazenamento de dados em um computador?        | \n");
+	printf("                                                                                                       | \n");
 	printf("a) CPU                                                                                                 | \n");
 	printf("b) Disco rígido (HD)                                                                                   | \n");
 	printf("c) Memória RAM                                                                                         | \n");
@@ -557,6 +569,7 @@ int pergunta12(int pontuacao){
 	printf("                                                                                                      | \n");
 	printf("Qual termo descreve um programa de computador projetado para fazer uma tarefa específica,              | \n");
 	printf("como processamento de texto?                                                                           | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Software                                                                                            | \n");
 	printf("b) Firmware                                                                                            | \n");
 	printf("c) Hardware                                                                                            | \n");
@@ -594,6 +607,7 @@ int pergunta13(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual destes dispositivos é usado para exibir informações visuais em um computador?                     | \n");
+	printf("                                                                                                       | \n");
 	printf("a) CPU                                                                                                 | \n");
 	printf("b) Monitor                                                                                             | \n");
 	printf("c) Roteador                                                                                            | \n");
@@ -631,6 +645,7 @@ int pergunta14(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual foi o sistema operacional desenvolvido por Linus Torvalds ?                                       | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Android                                                                                             | \n");
 	printf("b) Windows                                                                                             | \n");
 	printf("c) iOS                                                                                                 | \n");
@@ -668,10 +683,11 @@ int pergunta15(int pontuacao){
 	printf("  DIFICULDADE: FÁCIL                                                      PONTUAÇÃO: %d                 | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual tipo de dispositivo de entrada permite que você mova o cursor na tela de um computador ?          | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Teclado                                                                                             | \n");
-	printf("b) Mouse                                                                                             | \n");
-	printf("c) Impressora                                                                                                 | \n");
-	printf("d) Monitor                                                                                               | \n");
+	printf("b) Mouse                                                                                               | \n");
+	printf("c) Impressora                                                                                          | \n");
+	printf("d) Monitor                                                                                             | \n");
 	printf("-------------------------------------------------------------------------------------------------------| \n");
 	printf("OPÇÃO: ");
 	scanf("%s", &opcao);
@@ -707,6 +723,7 @@ int pergunta16(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual é a função da CPU (Unidade Central de Processamento) em um computador ?                           | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Exibir imagens na tela                                                                              | \n");
 	printf("b) Armazena dados permanentemente                                                                      | \n");
 	printf("c) Processar dados e executar instruções                                                               | \n");
@@ -745,6 +762,7 @@ int pergunta17(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é um SSD(Solid State Drive) em comparação com um HDD (Hard Disk Drive) ?                         | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Um tipo de mouse                                                                                    | \n");
 	printf("b) Um tipo de monitor                                                                                  | \n");
 	printf("c) Uma unidade de armazenamento mais rápida e sem partes móveis                                        | \n");
@@ -783,6 +801,7 @@ int pergunta18(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é um 'software de código aberto' ?                                                               | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Um software que não requer código-fonte                                                             | \n");
 	printf("b) Um software que não pode ser modificado                                                             | \n");
 	printf("c) Um software que só roda em sistemas Windows                                                         | \n");
@@ -821,6 +840,7 @@ int pergunta19(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual é o protocolo de rede amplamente usado para enviar e-mails ?                                      | \n");
+	printf("                                                                                                       | \n");
 	printf("a) TCP/IP                                                                                              | \n");
 	printf("b) SMTP                                                                                                | \n");
 	printf("c) HTTP                                                                                                | \n");
@@ -859,6 +879,7 @@ int pergunta20(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é 'realidade virtual' (VR) ?                                                                     | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Uma linguagem de programação                                                                        | \n");
 	printf("b) Uma tecnologia que cria ambientes virtuais imersivos                                                | \n");
 	printf("c) Um tipo de monitor de alta resolução                                                                | \n");
@@ -897,6 +918,7 @@ int pergunta21(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual é a linguagem de programação amplamente usada para desenvolver aplicativos para Android ?         | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Java                                                                                                | \n");
 	printf("b) Swift                                                                                               | \n");
 	printf("c) C++                                                                                                 | \n");
@@ -935,6 +957,7 @@ int pergunta22(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é 'cloud computing' ?                                                                            | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Um sistema de armazenamento de dados offline                                                        | \n");
 	printf("b) Uma tecnologia de comunicação por satélite                                                          | \n");
 	printf("c) Uma abordagem de computação que utiliza servidores remotos pela Internet para processar             | \n");
@@ -974,6 +997,7 @@ int pergunta23(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("Qual é o sistema operacional de código aberto baseado em Unix amplamente usado em servidores web ?     | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Linux                                                                                               | \n");
 	printf("b) Windows                                                                                             | \n");
 	printf("c) macOS                                                                                               | \n");
@@ -1012,6 +1036,7 @@ int pergunta24(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é um 'driver de dispositivo' em um computador ?                                                  | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Um software que ajuda a controlar e gerenciar um dispositivo de hardware específico                 | \n");
 	printf("b) Um tipo de dispositivo de entrada                                                                   | \n");
 	printf("c) Uma função de um sistema operacional                                                                | \n");
@@ -1050,6 +1075,7 @@ int pergunta25(int pontuacao){
 	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é a 'nuvem' em tecnologia da informação ?                                                        | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Uma forma de armazenamento físico de dados                                                          | \n");
 	printf("b) Um tipo de computador muito poderoso                                                                | \n");
 	printf("c) Um serviço de armazenamento online acessível pela internet                                          | \n");
@@ -1079,8 +1105,166 @@ int pergunta25(int pontuacao){
 	return pontuacao;
 }
 
+int pergunta26(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual componente de hardware é frequentemente chamado de 'cérebro' do computador                        | \n");
+	printf("devido à sua função de processamento?                                                                  | \n");
+	printf("                                                                                                       | \n");
+	printf("a) GPU                                                                                                 | \n");
+	printf("b) Placa-mãe                                                                                           | \n");
+	printf("c) CPU                                                                                                 | \n");
+	printf("d) Disco SSD                                                                                           | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "c") == 0 || strcmp(opcao,"C") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta27(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é o termo para um conjunto de programas de software que permitem a execução                       | \n");
+	printf("de tarefas específicas em um sistema operacional?                                                      | \n");
+	printf("                                                                                                       | \n");
+	printf("a) Interface de usuário                                                                                | \n");
+	printf("b) Aplicativo                                                                                          | \n");
+	printf("c) Kernel                                                                                              | \n");
+	printf("d) Suite de aplicativos                                                                                | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta28(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("O que a sigla 'SSD' representa em relação ao armazenamento de dados em computadores?                   | \n");
+	printf("                                                                                                       | \n");
+	printf("a) Super Storage Device                                                                                | \n");
+	printf("b) Solid State Drive                                                                                   | \n");
+	printf("c) Software Storage Disk                                                                               | \n");
+	printf("d) System Support Device                                                                               | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "b") == 0 || strcmp(opcao,"B") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
+int pergunta29(int pontuacao){
+	//média
+	char opcao[10];
+	setlocale(LC_ALL, "PORTUGUESE");
+	system("cls");
+	printf("-------------------------------------------------------------------------------------------------------|\n");
+	printf("  DIFICULDADE: MÉDIO                                                       PONTUAÇÃO: %d                | \n ", pontuacao);
+	printf("                                                                                                      | \n");
+	printf("Qual é o nome do 'SO' de código aberto baseado em Linux que é amplamente usado em servidores?          | \n");
+	printf("                                                                                                       | \n");
+	printf("a) Ubuntu                                                                                              | \n");
+	printf("b) Windows Server                                                                                      | \n");
+	printf("c) Red Hat Enterprise Linux                                                                            | \n");
+	printf("d) macOS                                                                                               | \n");
+	printf("-------------------------------------------------------------------------------------------------------| \n");
+	printf("OPÇÃO: ");
+	scanf("%s", &opcao);
+	int op = 0;
+	if(strcmp(opcao, "a") == 0 || strcmp(opcao,"A") == 0){
+		pontuacao = pontuacao + 10;
+		do{
+			system("cls");
+			printf("Você acertou parabénss :) !!!! \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op !=  0);
+	}else{
+		do{
+			system("cls");
+			printf("Você errou :( \n");
+			printf("Digite 0 para continuar ");
+			scanf("%d", &op);
+		}while(op != 0);
+		pontuacao = pontuacao - 5; 
+	}
+	
+	return pontuacao;
+}
+
 int pergunta30(int pontuacao){
-	//dificil
+	//dificil    
 	char opcao[10];
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
@@ -1088,6 +1272,7 @@ int pergunta30(int pontuacao){
 	printf("  DIFICULDADE: DIFÍCIL                                                     PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é a 'Lei de Moore' no contexto da tecnologia de computadores ?                                   | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Uma lei que restringe o uso de dispositivos de armazenamento externo                                | \n");
 	printf("b) Uma lei que estabelece os padrões de qualidade para monitores de computador                         | \n");
 	printf("c) Uma observação que sugere que o número de transistores em um chip de computador tende               | \n");
@@ -1127,6 +1312,7 @@ int pergunta31(int pontuacao){
 	printf("  DIFICULDADE: DIFÍCIL                                                     PONTUAÇÃO: %d                | \n ", pontuacao);
 	printf("                                                                                                      | \n");
 	printf("O que é a 'Lei de Moore' no contexto da tecnologia de computadores ?                                   | \n");
+	printf("                                                                                                       | \n");
 	printf("a) Uma lei que restringe o uso de dispositivos de armazenamento externo                                | \n");
 	printf("b) Uma lei que estabelece os padrões de qualidade para monitores de computador                         | \n");
 	printf("c) Uma observação que sugere que o número de transistores em um chip de computador tende               | \n");
@@ -1157,8 +1343,9 @@ int pergunta31(int pontuacao){
 	return pontuacao;
 }
 
-void validaPontuacao(int pontuacao){
+int validaPontuacao(int pontuacao){
 	setlocale(LC_ALL, "PORTUGUESE");
+	int op;
 	if(pontuacao == 225){
 		system("cls");
 		printf("Meus parabéns, você atingiu 225 pontos :) , a quantidade de máxima de pontos \n");
@@ -1172,11 +1359,16 @@ void validaPontuacao(int pontuacao){
 		system("cls");
 		printf("Não foi dessa vez, infelizmente passou longe da pontuação máxima :( , porém \n");
 		printf("continue firme no seus estudos e em sempre evoluir que concerteza conseguirá \n");
-		printf("supera seus desafios, continue !!");
+		printf("supera seus desafios, continue !! \n");
 	}
+	printf("1 - Para jogar novamente \n");
+	printf("2 - Para sair do jogo \n");
+	printf("OPÇÃO: ");
+	scanf("%d", &op);
+	return op;
 }
 
-void menuCreditos(){
+int menuCreditos(){
 	setlocale(LC_ALL, "PORTUGUESE");
 	system("cls");
 	int op;
@@ -1190,13 +1382,14 @@ void menuCreditos(){
 	printf("O projeto foi idealizado a partir de um trabalho da faculdade, o link do repositório com os códigos \n");
 	printf("para melhor análise: https://github.com/vitorv1/projeto-quiz \n");
 	printf("Obrigado por jogar :) \n");
-	printf("Digite 1 para voltar para o menu inicial \n");
-	printf("-------------------------------------------------------------------------------------------------------");
-	scanf("OPÇÃO: %d", &op);
+	printf("Digite 3 para voltar para o menu inicial \n");
+	printf("------------------------------------------------------------------------------------------------------- \n");
+	printf("OPCÃO:");
+	scanf("%d", &op);
 	return op;
 }
 
-void pergunta(int jogo){
+int pergunta(int jogo){
 	switch(jogo){
 		int pontuacao = 0;
 		case 1:{
@@ -1216,7 +1409,7 @@ void pergunta(int jogo){
 			pontuacao = pergunta32(pontuacao);
 			pontuacao = pergunta33(pontuacao);
 			pontuacao = pergunta34(pontuacao);*/
-			validaPontuacao(pontuacao);
+			return validaPontuacao(pontuacao);
 			break;
 		}
 		case 2 :{
@@ -1236,7 +1429,7 @@ void pergunta(int jogo){
 			pontuacao = pergunta13(pontuacao);
 			pontuacao = pergunta14(pontuacao);
 			pontuacao = pergunta15(pontuacao);
-			validaPontuacao(pontuacao);
+			return validaPontuacao(pontuacao);
 			break;
 		} 
 		case 3 :{
@@ -1256,7 +1449,7 @@ void pergunta(int jogo){
 			pontuacao = pergunta28(pontuacao);
 			pontuacao = pergunta29(pontuacao);
 			pontuacao = pergunta30(pontuacao);*/
-			validaPontuacao(pontuacao);
+			return validaPontuacao(pontuacao);
 			break;
 		}
 		/*case 4 :{
@@ -1276,7 +1469,7 @@ void pergunta(int jogo){
 			pontuacao = pergunta43(pontuacao);
 			pontuacao = pergunta44(pontuacao);
 			pontuacao = pergunta45(pontuacao);
-			validaPontuacao(pontuacao);
+			return  validaPontuacao(pontuacao);
 			break;
 		}*/
 		case 5 :{
@@ -1334,41 +1527,37 @@ void pergunta(int jogo){
 			  		case 45: pontuacao = pergunta45(pontuacao); break;*/
 				}
 		    }
-		    validaPontuacao(pontuacao);
+		    return validaPontuacao(pontuacao);
 		}	
 	}
 }
 
-void menuPrincipal(int op){
+int menuPrincipal(int op){
 	switch(op){
    		case 1:{
   			menuRegrasPt1();
 	       	menuRegrasPt2();
-    		pergunta(menuJogar());
+    		return pergunta(menuJogar());
 	   		break;
 		}	
 		case 2: menuCreditos(); 
     }
-}
-
-bool validaContinuar(){
-	int op;
-	printf("Para continuar a jogar, basta digitar 1 \n");
-	printf("Para sair do jogo e ir para os créditos digite 2 \n");
-	scanf("%d", &op);
-	if(op == 1)
-		return true;
-	else
-		return false;
-	
+    return 0;
 }
 
 void main(){
-	int op;
+	int op, op2;
 	while(op != 1){
 		op = menuInicial();
 		if(op == 2)
 			op = menuCreditos();
 	}
+	
+	while(op2 < 2){
+		op2 = menuPrincipal(op);
+	}
+	system("cls");
+	printf("Tchau :)");
+	
 }
 
