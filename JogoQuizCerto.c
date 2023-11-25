@@ -1934,7 +1934,7 @@ int menuCreditos(){
 	printf("Esse jogo foi desenvolvido por dois alunos da Unicesumar(Maringá/Paraná) \n");
 	printf("do curso de ADS(Análise e Desenvolvimento de Sistemas), esses são: \n");
 	printf("\n");
-	printf("- Vitor Hugo Vieria de Lima | Linkedin: www.linkedin.com/in/vitor-hugo-vieira-de-lima-a2286a244 \n");
+	printf("- Vitor Hugo Vieria de Lima | Linkedin: https://www.linkedin.com/in/vitor-hugo-vieira-de-lima-a2286a244 \n");
 	printf("- Daniel Francis Rinaldi Araujo | Linkedin: https://www.linkedin.com/in/daniel-rinaldi-272907246 \n");
 	printf("\n");
 	printf("O projeto foi idealizado a partir de um trabalho da faculdade, o link do repositório com os códigos \n");
