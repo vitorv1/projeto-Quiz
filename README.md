@@ -4,6 +4,11 @@
 
 Este projeto é referente á um trabalho da faculdade, que consiste em criar um jogo, nesse caso foi escolhido o quiz, colocando em prática os conhecimentos adiquiridos em linguagem C.
 
+#
+Este é um vídeo mostrando melhor o projeto:
+
+<a href="https://youtu.be/Xl_Yelvdvnk">Vídeo</a>
+
 ## ⚒️ Ferramentas
 
 As tecnologias utilizidas nesse projeto foi apenas a linguagem C
